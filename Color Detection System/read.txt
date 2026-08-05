@@ -1,0 +1,9 @@
+Show a colored card to the camera:
+  BLUE  -> Facebook
+  RED   -> YouTube
+  GREEN -> Whatsapp
+Press Q to quit
+
+Opening RED -> https://www.youtube.com
+Opening BLUE -> https://www.facebook.com
+Opening GREEN -> https://web.whatsapp.com/
