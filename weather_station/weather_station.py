@@ -1,9 +1,9 @@
-import streamlit as st
-import requests
+import streamlit as st # pyright: ignore[reportMissingImports]
+import requests # pyright: ignore[reportMissingModuleSource]
 import json
 from datetime import datetime
 
-def get_weather(city):
+def get_weather(city): 
     url = f"https://wttr.in/{city}?format=j1&lang=en&m"
 
     try:
@@ -23,7 +23,7 @@ def get_weather(city):
             return {
                 'city': area,
                 'temperature': temp_c,
-                'condition': weather_desc,
+                 'condition': weather_desc,
                 'humidity': humidity,
                 'wind_speed': wind_speed,
                 'last_updated': current['observation_time']
@@ -35,20 +35,16 @@ def get_weather(city):
         print(f"Error fetching weather: {e}")
         return None
 
-st.set_page_config(
-    page_title="🌤️ Weather Station",
-    page_icon="🌤️",
-    layout="centered"
-)
+st.set_page_config(page_title="Weather Dashboard", layout="centered")
 
-st.title("🌤️ Weather Station")
-st.markdown("### Your Personal Weather Dashboard")
+st.title("🌤️ Weather Dashboard")
+
 st.write("Enter a city name to get the current weather conditions.")
 
-city = st.text_input("📍 City Name:", value="London")
+city = st.text_input("City Name:", value="London")
 
-if st.button("🔍 Get Weather"):
-    with st.spinner(f"⏳ Fetching weather for {city}..."):
+if st.button("Get Weather"):
+    with st.spinner(f"Fetching weather for {city}..."):
         weather_data = get_weather(city)
 
     if weather_data is None:
@@ -65,7 +61,7 @@ if st.button("🔍 Get Weather"):
             col2.metric("💧 Humidity", f"{weather_data['humidity']}%")
             col2.metric("💨 Wind Speed", f"{weather_data['wind_speed']} km/h")
 
-            st.caption(f"🕐 Last updated: {weather_data['last_updated']} UTC")
+            st.caption(f"Last updated: {weather_data['last_updated']} UTC")
 
         temp = float(weather_data['temperature'])
 
@@ -81,5 +77,4 @@ if st.button("🔍 Get Weather"):
             st.info("🔥 It's hot! Stay cool and drink water.")
 
 st.divider()
-st.caption("📊 Data provided by wttr.in (free weather service)")
-st.caption("💻 Built with Streamlit")
+st.caption("Data provided by wttr.in (free weather service).")
