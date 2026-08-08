@@ -99,3 +99,326 @@ def scrape_books():
         price = float(re.findall(r"\d+\.\d+", price_text)[0])
         books_list.append({"title": title, "price": price})
     return books_list
+
+
+
+
+2. 🌤️ Weather Dashboard
+
+A real-time weather dashboard that allows users to search for weather information by city.
+
+✨ Features
+🌍 Search weather by city
+🌡️ Temperature
+☁️ Weather conditions
+💧 Humidity
+💨 Wind speed
+💡 Weather recommendations
+⏱️ Real-time weather data
+🛠️ Technologies
+Python
+Streamlit
+Requests
+wttr.in API
+▶️ Run
+streamlit run weather_dashboard.py
+3. ✋ AI Gesture Control System
+
+A computer vision application that allows users to control their computer using hand gestures through a webcam.
+
+✨ Gesture Controls
+Gesture	Action
+✊ Fist	Play / Pause
+☝️ 1 Finger	Volume Up
+✌️ 2 Fingers	Volume Down
+3 Fingers	Scroll Up
+4 Fingers	Scroll Down
+🖐️ 5 Fingers	Screenshot
+👍 Thumb	Mute Toggle
+🛠️ Technologies
+Python
+OpenCV
+MediaPipe
+PyAutoGUI
+Tkinter
+▶️ Run
+python gesture_control.py
+4. 🚗 Vehicle Monitoring System
+
+An AI-powered traffic monitoring system for detecting vehicles, identifying vehicle colors, and recognizing license plates.
+
+✨ Features
+🚗 Vehicle detection
+🤖 YOLOv8 object detection
+🎨 Vehicle color detection
+📝 License plate recognition
+🔎 OCR using EasyOCR
+📧 Email alerts for newly detected plates
+🚘 Supported Vehicles
+🚗 Cars
+🏍️ Motorcycles
+🚌 Buses
+🚛 Trucks
+🛠️ Technologies
+Python
+OpenCV
+YOLOv8
+Ultralytics
+EasyOCR
+PyTorch
+▶️ Run
+python vehicle_monitor.py
+5. 🤖 Hasnain AI Chatbot
+
+An AI-powered conversational chatbot built with Streamlit and the Groq API.
+
+The chatbot includes a personal knowledge base and supports conversational interactions in English and Urdu.
+
+✨ Features
+🌍 English and Urdu support
+🧠 Personal knowledge base
+💾 Persistent chat history
+🔄 Chat management
+🔍 Search conversations
+✏️ Rename chats
+🗑️ Delete chats
+📤 Export conversations
+📄 TXT and JSON export
+🧠 Supported Models
+Model	Speed	Quality
+llama-3.1-8b-instant	⚡ Fast	Good
+gemma2-9b-instant	⚖️ Balanced	Better
+llama-3.3-70b-versatile	🐢 Slower	Best
+🛠️ Technologies
+Python
+Streamlit
+Groq API
+JSON
+Python-dotenv
+🔐 API Key
+
+Create a .env file:
+
+GROQ_API_KEY=your_groq_api_key
+▶️ Run
+streamlit run hasnain_ai.py
+6. 🧭 Search Algorithm Visualizer
+
+An interactive Jupyter Notebook for visualizing and understanding different search algorithms.
+
+🔎 Algorithms
+🔵 Breadth-First Search (BFS)
+🔵 Depth-First Search (DFS)
+🔵 Uniform Cost Search (UCS)
+🔵 Greedy Best-First Search
+🔵 A* Search
+🎨 Visualization
+Indicator	Meaning
+🟩 Green	Start
+🟥 Red	Goal
+⬛ Black	Wall
+🔵 Blue	Explored
+🟡 Yellow	Final Path
+🛠️ Technologies
+Python
+Jupyter Notebook
+Matplotlib
+NumPy
+Data Structures & Algorithms
+▶️ Run
+jupyter notebook search_visualizer.ipynb
+7. 🗺️ Pathfinding Visualizer
+
+A Tkinter desktop application for visualizing and comparing pathfinding algorithms.
+
+✨ Features
+🖱️ Draw walls interactively
+🎯 Set start and destination
+🔎 Visualize pathfinding
+⚡ Speed control
+📊 Algorithm statistics
+🔬 Algorithm comparison
+🧠 Algorithms
+BFS
+DFS
+Greedy Best-First Search
+A* Search
+🛠️ Technologies
+Python
+Tkinter
+Data Structures & Algorithms
+▶️ Run
+python pathfinding_visualizer.py
+🛠️ Technologies Used
+Category	Technologies
+Programming	Python
+Web Development	Streamlit
+Web Scraping	BeautifulSoup, Requests
+Computer Vision	OpenCV, MediaPipe
+Object Detection	YOLOv8, Ultralytics
+OCR	EasyOCR
+AI / LLM	Groq API
+Machine Learning	PyTorch
+Data Processing	NumPy, Pandas
+Visualization	Matplotlib
+GUI	Tkinter
+Automation	PyAutoGUI
+Notebook	Jupyter
+Data Format	JSON
+📦 Installation
+1. Clone the Repository
+git clone https://github.com/Hasnain-118/Python-.git
+cd Python-
+2. Create Virtual Environment
+Windows
+python -m venv venv
+venv\Scripts\activate
+Linux / macOS
+python3 -m venv venv
+source venv/bin/activate
+3. Install Dependencies
+pip install -r requirements.txt
+📋 Requirements
+
+The main dependencies used across the projects are:
+
+streamlit
+beautifulsoup4
+requests
+opencv-python
+mediapipe
+pyautogui
+ultralytics
+easyocr
+torch
+numpy
+matplotlib
+pandas
+groq
+python-dotenv
+jupyter
+
+You can install them manually with:
+
+pip install streamlit beautifulsoup4 requests opencv-python mediapipe pyautogui ultralytics easyocr torch numpy matplotlib pandas groq python-dotenv jupyter
+🔐 Environment Variables
+
+Some projects require API credentials.
+
+Create a .env file where required:
+
+GROQ_API_KEY=your_groq_api_key
+
+⚠️ Never upload API keys, passwords, .env files, or other sensitive credentials to GitHub.
+
+▶️ Project Commands
+#	Project	Command
+1	📖 Book Budget Finder	streamlit run book_budget_finder.py
+2	🌤️ Weather Dashboard	streamlit run weather_dashboard.py
+3	✋ Gesture Control	python gesture_control.py
+4	🚗 Vehicle Monitoring	python vehicle_monitor.py
+5	🤖 Hasnain AI	streamlit run hasnain_ai.py
+6	🧭 Search Visualizer	jupyter notebook search_visualizer.ipynb
+7	🗺️ Pathfinding Visualizer	python pathfinding_visualizer.py
+📁 Project Structure
+Python-/
+│
+├── book_budget_finder/
+│   └── book_budget_finder.py
+│
+├── weather_dashboard/
+│   └── weather_dashboard.py
+│
+├── gesture_control/
+│   └── gesture_control.py
+│
+├── vehicle_monitor/
+│   ├── vehicle_monitor.py
+│   └── Traffic.mp4
+│
+├── hasnain_ai/
+│   ├── hasnain_ai.py
+│   ├── Hasnain.json
+│   └── chat_histories/
+│
+├── search_visualizer/
+│   └── search_visualizer.ipynb
+│
+├── pathfinding_visualizer/
+│   └── pathfinding_visualizer.py
+│
+├── requirements.txt
+└── README.md
+🎯 Skills Demonstrated
+🐍 Python Programming
+🧱 Object-Oriented Programming
+🌐 Web Scraping
+🌐 Web Application Development
+🤖 Artificial Intelligence
+👁️ Computer Vision
+✋ Gesture Recognition
+🚗 Object Detection
+🔎 Optical Character Recognition
+🧠 LLM Integration
+💬 Chatbot Development
+🧮 Data Structures & Algorithms
+🗺️ Pathfinding Algorithms
+📊 Data Visualization
+🖥️ Desktop GUI Development
+🔌 API Integration
+📂 JSON Handling
+⚙️ Automation
+📈 Learning Journey
+
+These projects represent a practical learning journey from basic programming concepts toward more advanced software engineering and AI applications.
+
+Python Programming
+        ↓
+Web Scraping
+        ↓
+Web Applications
+        ↓
+API Integration
+        ↓
+Computer Vision
+        ↓
+Artificial Intelligence
+        ↓
+LLM / Chatbot Development
+        ↓
+Data Structures & Algorithms
+        ↓
+Algorithm Visualization
+🚀 Future Improvements
+ Add more AI-powered projects
+ Improve UI/UX across applications
+ Add automated testing
+ Improve error handling
+ Deploy more applications online
+ Add database integration
+ Add authentication
+ Add project screenshots
+ Add live demos
+ Add CI/CD workflows
+ Dockerize selected projects
+👨‍💻 Developer
+
+Muhammad Hasnain Iftikhar
+
+🎓 Bachelor's in Software Engineering
+🏫 COMSATS University Islamabad, Sahiwal Campus
+
+📧 University: fa24-bse-118@students.cuisahiwal.edu.pk
+📧 Personal: mhasnain48776246@gmail.com
+
+📄 License
+
+This repository is licensed under the MIT License.
+
+See the LICENSE file for more information.
+
+⭐ Support
+
+If you find these projects useful or interesting, consider giving the repository a ⭐ on GitHub.
+
+© 2026 Muhammad Hasnain Iftikhar | Python Projects Portfolio
