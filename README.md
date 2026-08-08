@@ -1,6 +1,6 @@
 # 🚀 AI & Software Engineering Projects Portfolio
 
-> A comprehensive collection of AI-powered applications, algorithm visualizations, and software engineering projects developed by Muhammad Hasnain Iftikhar
+> A comprehensive collection of AI-powered applications, algorithm visualizations, and software engineering projects
 
 ![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)
 ![Streamlit](https://img.shields.io/badge/Streamlit-1.28+-red.svg)
@@ -8,13 +8,13 @@
 ![License](https://img.shields.io/badge/License-MIT-yellow.svg)
 ![Status](https://img.shields.io/badge/Status-Active-success.svg)
 ![PRs](https://img.shields.io/badge/PRs-Welcome-brightgreen.svg)
-![Made with Love](https://img.shields.io/badge/Made%20with-❤️-red.svg)
 
 ---
 
 ## 📖 Table of Contents
 
 - [Overview](#-overview)
+- [All Projects Summary](#-all-projects-summary)
 - [Projects](#-projects)
   - [📚 Book Budget Finder](#-book-budget-finder)
   - [🌤️ Weather Dashboard](#️-weather-dashboard)
@@ -30,8 +30,6 @@
 - [🤝 Contributing](#-contributing)
 - [📄 License](#-license)
 - [📧 Contact](#-contact)
-- [🙏 Acknowledgments](#-acknowledgments)
-- [⭐ Support](#-support)
 
 ---
 
@@ -49,15 +47,21 @@ This portfolio showcases **7 complete, production-ready projects** demonstrating
 - 💻 **Skills:** Python, Java, C++, SQL, AI/ML, Web Development
 - 🔬 **Interests:** Artificial Intelligence, Computer Vision, NLP, Algorithm Design
 
-### Skills Demonstrated
+---
 
-| Domain | Skills |
-|--------|--------|
-| **Artificial Intelligence** | LLM Integration, NLP, Computer Vision, Object Detection |
-| **Software Engineering** | OOP, Design Patterns, API Integration, GUI Development |
-| **Data Science** | Data Scraping, Visualization, Analysis, Processing |
-| **Web Development** | Streamlit, HTML/CSS, Interactive Dashboards |
-| **Algorithm Design** | Search Algorithms, Pathfinding, Optimization |
+## 📊 All Projects Summary
+
+| # | Project | Lines of Code | Files | Status | Framework |
+|---|---------|--------------|-------|--------|-----------|
+| 1 | 📚 Book Budget Finder | ~80 | 1 | ✅ Complete | Streamlit |
+| 2 | 🌤️ Weather Dashboard | ~70 | 1 | ✅ Complete | Streamlit |
+| 3 | ✋ AI Gesture Control | ~350 | 1 | ✅ Complete | OpenCV + Tkinter |
+| 4 | 🚗 Vehicle Monitoring | ~250 | 2 | ✅ Complete | YOLO + OCR |
+| 5 | 🤖 Hasnain AI Chatbot | ~400 | 3 | ✅ Complete | Streamlit + Groq |
+| 6 | 🧭 Search Visualizer | ~350 | 1 | ✅ Complete | Jupyter Notebook |
+| 7 | 🗺️ Pathfinding Visualizer | ~500 | 1 | ✅ Complete | Tkinter |
+
+**Total:** ~2000 lines of code | 10+ files | 7 complete applications
 
 ---
 
@@ -69,7 +73,6 @@ This portfolio showcases **7 complete, production-ready projects** demonstrating
 
 [![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=flat&logo=Streamlit&logoColor=white)](https://streamlit.io)
 [![BeautifulSoup](https://img.shields.io/badge/BeautifulSoup-4.12-blue)](https://www.crummy.com/software/BeautifulSoup/)
-[![Requests](https://img.shields.io/badge/Requests-2.31-blue)](https://docs.python-requests.org/)
 
 #### Description
 A web application that scrapes real-time book data from an online bookstore and helps users find affordable books within their budget. Perfect for book lovers who want to maximize their purchasing power.
@@ -83,11 +86,16 @@ A web application that scrapes real-time book data from an online bookstore and 
 
 #### Technical Details
 ```python
-# Core scraping function
 def scrape_books():
     url = "https://books.toscrape.com/"
     response = requests.get(url, timeout=10)
     soup = BeautifulSoup(response.text, "html.parser")
     cards = soup.find_all("article", class_="product_pod")
-    # Extract title and price from each card
+    
+    books_list = []
+    for card in cards:
+        title = card.h3.a["title"]
+        price_text = card.find("p", class_="price_color").text
+        price = float(re.findall(r"\d+\.\d+", price_text)[0])
+        books_list.append({"title": title, "price": price})
     return books_list
