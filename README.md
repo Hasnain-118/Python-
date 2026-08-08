@@ -55,8 +55,10 @@ Each project focuses on solving a specific problem while strengthening practical
 | 05 | 🤖 **Hasnain AI Chatbot** | Generative AI | Streamlit, Groq API | 🟢 Complete |
 | 06 | 🧭 **Search Algorithm Visualizer** | Algorithms | Python, Jupyter, Matplotlib | 🟢 Complete |
 | 07 | 🗺️ **Pathfinding Visualizer** | Desktop App | Python, Tkinter | 🟢 Complete |
+| 08 | 🎨 **Color Detection System** | Computer vision  | OpenCV, NumPy, Webbrowser | 🟢 Complete |
 
-> **7 Projects • 2000+ Lines of Code • 10+ Files**
+
+> **8 Projects • 2000+ Lines of Code • 10+ Files**
 
 ---
 
