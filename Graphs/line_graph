@@ -1,0 +1,14 @@
+import matplotlib.pyplot as plt
+dates = ['2022-01', '2022-03', '2022-05', '2022-07', '2022-09', '2022-11', '2023-01']
+open_prices = [36200, 33500, 35000, 30000, 31500, 33000, 33200]
+close_prices = [36500, 34000, 35500, 30500, 31000, 33500, 33500]
+plt.figure(figsize=(10, 5))
+plt.plot(dates, open_prices, linestyle='--', linewidth=3, marker='o', label='Open', color='blue')
+plt.plot(dates, close_prices, linestyle=':', linewidth=1.5, marker='s', label='Close', color='red')
+plt.xlabel('Date')
+plt.ylabel('Price')
+plt.title('DJIA Open and Close Prices')
+plt.legend()
+plt.grid(True)
+plt.tight_layout()
+plt.show()
